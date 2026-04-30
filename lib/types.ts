@@ -13,3 +13,15 @@ export interface Club {
   memberCount: number;
   tags: string[];
 }
+
+export interface QuizOption {
+  id: string;
+  text: string;
+  weights: Partial<Record<ClubCategory, number>>;
+}
+
+export interface QuizQuestion {
+  id: string;
+  text: string;
+  options: QuizOption[];
+}
