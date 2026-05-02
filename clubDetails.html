@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLB Tin học Sinh viên - HUST Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#926e6b",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-low": "#f6f3f4",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e7bdb8",
+                        "secondary": "#5d5f5f",
+                        "inverse-surface": "#303031",
+                        "inverse-primary": "#ffb4ac",
+                        "on-surface-variant": "#5d3f3c",
+                        "surface-container-highest": "#e5e2e3",
+                        "surface-container-high": "#eae7e8",
+                        "background": "#fcf8f9",
+                        "surface-variant": "#e5e2e3",
+                        "tertiary": "#705d00",
+                        "primary": "#b90014",
+                        "surface-dim": "#dcd9da",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1c",
+                        "tertiary-container": "#c9a900",
+                        "surface-container": "#f0edee",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "on-tertiary-container": "#4c3f00",
+                        "on-surface": "#1b1b1c",
+                        "on-primary-container": "#fff9f8",
+                        "secondary-container": "#dfe0e0",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#c00015",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffe16d",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf8f9",
+                        "on-secondary-container": "#616363",
+                        "surface": "#fcf8f9",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "on-primary-fixed": "#410002",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#93000d",
+                        "primary-container": "#e31b23"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-max-width": "1280px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "margin": "24px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "gutter": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-gray-950 font-['Inter'] tracking-tight border-b border-gray-200 dark:border-gray-800 flat no shadows docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 h-16">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-red-600 dark:text-red-500">Bách Khoa Clubs</span>
+<nav class="hidden md:flex gap-6 h-16 items-center">
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-red-600 dark:hover:text-red-400 transition-colors h-full flex items-center" href="#">Dashboard</a>
+<a class="text-red-600 font-bold border-b-2 border-red-600 pb-1 hover:text-red-600 dark:hover:text-red-400 transition-colors h-full flex items-center Active: opacity-80 transition-opacity" href="#">All Clubs</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-red-600 dark:hover:text-red-400 transition-colors h-full flex items-center" href="#">My Memberships</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-red-600 dark:hover:text-red-400 transition-colors h-full flex items-center" href="#">Events</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-red-600 dark:hover:text-red-400 transition-colors h-full flex items-center" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-gray-600 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-gray-600 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-gray-600 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<nav class="hidden lg:flex flex-col h-full pt-20 bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 h-screen w-64 fixed left-0 top-0 border-r flat no shadows z-40">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="University Seal" class="w-full h-full object-cover" data-alt="A stylized, minimalist crest representing academic excellence, featuring subtle gold and crimson accents against a pristine white background. High contrast, clean vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjDbD_FOePXXYK_n37rshdqhjD1pX87zKUEIiKLzW2h0o0rm36WLxMgssbpK3as4Se5_ftVzgi8EIG0Iq4NOoJ_xTRRtAuv3VlB7f2Ymq6H4IXgeJLfervccQpqgclVSmUyXBALvaTtWpzFkFvray2QstL3CRgLuEPz_kkl82EKdXDiA4SRNDIjHlYOMpe9iiPwSHvMhNbSwVxgXNxD8R5Kv9pgFRp0lpZgOFtbSzgALCZSgf9DcHRKbpVdB_f97CY84uMoQfGtjU"/>
+</div>
+<div>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white font-['Inter']">HUST Global</h2>
+<p class="font-['Inter'] text-sm font-semibold text-gray-500">Academic Excellence</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 px-2 font-['Inter'] text-sm font-semibold">
+<a class="flex items-center space-x-3 text-gray-500 dark:text-gray-400 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border-l-4 border-red-600 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all rounded-r-full Active: scale-[0.98] duration-150" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span>All Clubs</span>
+</a>
+<a class="flex items-center space-x-3 text-gray-500 dark:text-gray-400 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span>My Memberships</span>
+</a>
+<a class="flex items-center space-x-3 text-gray-500 dark:text-gray-400 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Events</span>
+</a>
+<a class="flex items-center space-x-3 text-gray-500 dark:text-gray-400 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">folder_shared</span>
+<span>Resources</span>
+</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-64 w-full flex flex-col">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[400px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Tech Abstract Background" class="w-full h-full object-cover" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6qdNybVEEOoPAtO6d3-F7XiBDaQIWdfM7uGcbHWZdgfB90hjTZ_-HGKlKQWMrFlSBJe9K5-0T7jpDGIURlTwVilF5zeFF_tAph5FYZPxYDtZK8ijKwDBSQ_PE3vBRttOAtOHkYDqUXKdexpk4fXQd25CtZiDwyeyReKDBqsk-nN7AgZT39SI-x2SWMdCQGX88EOXyHGWtiqGy07VdHIf48s03R4hz-cPkr_uXuwi2vwxnDLM_4K-N--ohfD5tU0zZ4CX-KXrZO54"/>
+<div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-container-max-width mx-auto flex flex-col items-center">
+<div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-surface border border-outline-variant mb-6 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container mr-2"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Official Academic Club</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-background mb-4">CLB Tin học Sinh viên</h1>
+<p class="font-headline-md text-headline-md text-secondary max-w-2xl font-light">Pioneering technical excellence and innovation within the Bách Khoa community.</p>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary-container text-on-primary font-label-lg text-label-lg px-8 py-3 rounded-DEFAULT hover:bg-primary transition-colors flex items-center gap-2">
+<span>Join the Club</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-surface text-primary border border-primary-container font-label-lg text-label-lg px-8 py-3 rounded-DEFAULT hover:bg-surface-container-low transition-colors">
+                            Contact Us
+                        </button>
+</div>
+</div>
+</section>
+<!-- Content Canvas -->
+<div class="max-w-container-max-width w-full mx-auto px-6 lg:px-12 py-16 flex flex-col gap-24">
+<!-- About Section (Minimalist) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-md text-display-md text-on-background mb-6">Vision &amp; Mission</h2>
+<div class="w-12 h-1 bg-primary-container mb-8"></div>
+<p class="font-body-lg text-body-lg text-secondary mb-6 leading-relaxed">
+                            We are dedicated to fostering a rigorous environment where students can explore advanced computing paradigms. Our mission is to bridge the gap between theoretical computer science and practical, industry-standard software engineering.
+                        </p>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            By cultivating a culture of peer-driven learning and algorithmic thinking, we aim to produce the next generation of technical leaders from Hanoi University of Science and Technology.
+                        </p>
+</div>
+<div class="relative h-[400px] rounded-xl overflow-hidden shadow-sm border border-surface-variant">
+<img alt="Clean code environment" class="w-full h-full object-cover" data-alt="A pristine, minimalist workspace featuring a high-end monitor displaying clean, colorful lines of code against a dark IDE background. The setting is bright and spacious, bathed in natural light, creating a modern, professional academic atmosphere. Subtle accents of HUST Red are visible in the desk accessories. No people are present, emphasizing focus and technical rigor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6wYNutvSVd-ufZJz-J83GLD1y-6MK4BIMVw8cy-o8Rl5eqYCrGJ6tXjCXs0LZ8GcY3yxwMBDf1RJOaLMsy2A2vNQ0GNDdnqfBkEd8qON5Vh9Kfurc8b6C_cAWn_-Km5-9yo7GucgxOPpWloZ7MzF94c8P5EDlO5NW2L-lJABckPoV1I68STZr9KDAMCHgJ6QDyAB1idiO5OEghEuh9CWEam6Wz9gwJguuCGe3bwVnzl13i0P0OTa0F_EuyK2XX1mKMqfW0_5IA6A"/>
+</div>
+</section>
+<!-- Highlights (3 Stats) -->
+<section class="py-12 border-y border-surface-variant bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-surface-variant">
+<div class="flex flex-col items-center py-4 md:py-0">
+<span class="font-display-lg text-display-lg text-primary-container mb-2">350+</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Active Members</span>
+</div>
+<div class="flex flex-col items-center py-4 md:py-0">
+<span class="font-display-lg text-display-lg text-primary-container mb-2">45</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Annual Projects</span>
+</div>
+<div class="flex flex-col items-center py-4 md:py-0">
+<span class="font-display-lg text-display-lg text-primary-container mb-2">12</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">National Awards</span>
+</div>
+</div>
+</section>
+<!-- Major Activities (Bento Grid) -->
+<section>
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Core Activities</h2>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">Structured initiatives designed to elevate technical proficiency and professional readiness.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-8 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed rounded-bl-full opacity-20 -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Algorithmic Training</h3>
+<p class="font-body-md text-body-md text-secondary">Weekly intensive sessions focusing on competitive programming, data structures, and advanced problem-solving techniques.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-8 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-fixed rounded-bl-full opacity-20 -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Hardware Interfacing</h3>
+<p class="font-body-md text-body-md text-secondary">Hands-on workshops bridging software logic with microcontrollers and embedded systems architecture.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-8 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed rounded-bl-full opacity-50 -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Tech Seminars</h3>
+<p class="font-body-md text-body-md text-secondary">Monthly guest lectures from industry professionals and alumni detailing current trends in software architecture and AI.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-8 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-error-container rounded-bl-full opacity-30 -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-error">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Hackathons</h3>
+<p class="font-body-md text-body-md text-secondary">Internal 48-hour coding challenges designed to simulate high-pressure development environments and foster rapid prototyping.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Contact Footer with Mini-Map -->
+<section class="bg-surface-container-low border-t border-surface-variant py-16 mt-auto">
+<div class="max-w-container-max-width mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Get in Touch</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-background">Room 201, D9 Building</p>
+<p class="font-body-md text-body-md text-secondary">Hanoi University of Science and Technology</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+<p class="font-body-md text-body-md text-secondary">contact@tin-hoc-sv.hust.edu.vn</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">language</span>
+<p class="font-body-md text-body-md text-secondary">fb.com/tin.hoc.sv</p>
+</div>
+</div>
+</div>
+<div class="h-64 rounded-xl overflow-hidden border border-surface-variant bg-surface">
+<!-- Placeholder for Map -->
+<img alt="Map Location" class="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" data-alt="A clean, highly stylized, minimalist vector map focusing on a university campus area in Hanoi. The map features a light mode color palette with soft greys and whites for roads and landmasses, accented by a single, precise pin marker in striking HUST Red indicating the club's location." data-location="Hanoi, Vietnam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIGbXzg76qYxP7soyYk376huJz2ztymkt5WAtUlXeGTBu9sgb2XU31XlcGL-wUtsef2dpyCRIO2T2tC1AaTYRtURxEOgz-BeNwRMZYcggt6ngWn2oalOxi5RBCyTsQ8t3WUd-aFe52TlbJQGCAuh6P7tgftkjObisZaqOjRz8GvNqKw1kA4amm7Krg9SUjrMGFWVa52Ih_fi8HaXyCR0RFWcn2xcm3S27dMWl7b-4ToopnUQuA9oTJou_OSplynBtj-Cvu52fa2_k"/>
+</div>
+</div>
+</section>
+<!-- Footer Shared Component -->
+<footer class="bg-white dark:bg-gray-950 font-['Inter'] text-xs text-gray-400 border-t border-gray-200 dark:border-gray-800 flat w-full border-t mt-auto">
+<div class="flex justify-between items-center px-12 py-8 max-w-7xl mx-auto flex-col md:flex-row gap-4">
+<span class="font-bold text-gray-400">© 2024 Hanoi University of Science and Technology</span>
+<nav class="flex gap-6">
+<a class="text-gray-400 hover:text-red-500 Default" href="#">About</a>
+<a class="text-gray-400 hover:text-red-500 Default" href="#">Support</a>
+<a class="text-gray-400 hover:text-red-500 Default" href="#">Privacy</a>
+<a class="text-gray-400 hover:text-red-500 Default" href="#">Terms</a>
+</nav>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

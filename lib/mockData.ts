@@ -9,6 +9,41 @@ export const clubs: Club[] = [
       "A community for developers to build, share, and grow together through projects and workshops.",
     memberCount: 84,
     tags: ["coding", "open-source", "web"],
+    meetingFrequency: "Weekly meetups",
+    icon: "terminal",
+    vision:
+      "We are dedicated to fostering a rigorous environment where students can explore advanced computing paradigms. Our mission is to bridge the gap between theoretical computer science and practical, industry-standard software engineering. By cultivating a culture of peer-driven learning and algorithmic thinking, we aim to produce the next generation of technical leaders.",
+    annualProjects: 24,
+    awards: 6,
+    activities: [
+      {
+        icon: "code",
+        title: "Coding Workshops",
+        description:
+          "Weekly hands-on sessions covering web development, algorithms, and software engineering best practices.",
+      },
+      {
+        icon: "hub",
+        title: "Open Source Projects",
+        description:
+          "Collaborative contributions to open source projects, building real-world experience and portfolios.",
+      },
+      {
+        icon: "developer_board",
+        title: "Hackathons",
+        description:
+          "Intensive 48-hour coding challenges designed to foster rapid prototyping and creative problem-solving.",
+      },
+      {
+        icon: "school",
+        title: "Tech Talks",
+        description:
+          "Monthly speaker sessions from industry professionals sharing insights on emerging technologies and career paths.",
+      },
+    ],
+    address: "Room 201, D9 Building, Hanoi University of Science and Technology",
+    email: "contact@devcircle.hust.edu.vn",
+    website: "fb.com/devcircle.hust",
   },
   {
     id: "2",
@@ -18,6 +53,41 @@ export const clubs: Club[] = [
       "Explore UI/UX, graphic design, and creative thinking in a collaborative studio environment.",
     memberCount: 52,
     tags: ["design", "ui", "creativity"],
+    meetingFrequency: "Thu evenings",
+    icon: "brush",
+    vision:
+      "Design Lab exists to nurture the creative minds of tomorrow. We believe that great design is the intersection of art and technology. Our studio provides a collaborative space for students to develop their visual literacy, user empathy, and design thinking skills while building a portfolio that stands out.",
+    annualProjects: 18,
+    awards: 4,
+    activities: [
+      {
+        icon: "palette",
+        title: "Design Critiques",
+        description:
+          "Regular peer review sessions where members present work and receive structured, constructive feedback.",
+      },
+      {
+        icon: "devices",
+        title: "UI/UX Sprints",
+        description:
+          "Fast-paced product design sprints simulating real agency workflows and client deliverables.",
+      },
+      {
+        icon: "photo_camera",
+        title: "Visual Storytelling",
+        description:
+          "Photography and illustration workshops focused on communicating ideas through compelling visuals.",
+      },
+      {
+        icon: "groups",
+        title: "Industry Mentorship",
+        description:
+          "One-on-one sessions with professional designers from leading product companies and agencies.",
+      },
+    ],
+    address: "Room 305, B1 Building, Hanoi University of Science and Technology",
+    email: "contact@designlab.hust.edu.vn",
+    website: "fb.com/designlab.hust",
   },
   {
     id: "3",
@@ -27,6 +97,41 @@ export const clubs: Club[] = [
       "Driving sustainability initiatives on campus through events, research, and advocacy.",
     memberCount: 67,
     tags: ["environment", "volunteer", "campus"],
+    meetingFrequency: "Monthly meetings",
+    icon: "eco",
+    vision:
+      "Green Campus is committed to transforming our university into a model of environmental responsibility. We work at the intersection of student activism, scientific research, and community engagement to drive meaningful change. Every initiative we run is designed to educate, inspire, and create lasting impact beyond the campus borders.",
+    annualProjects: 12,
+    awards: 3,
+    activities: [
+      {
+        icon: "recycling",
+        title: "Campus Recycling Drives",
+        description:
+          "Organizing campus-wide waste collection events and educating students on responsible recycling practices.",
+      },
+      {
+        icon: "forest",
+        title: "Green Research",
+        description:
+          "Student-led sustainability research projects in partnership with the university's environmental science department.",
+      },
+      {
+        icon: "volunteer_activism",
+        title: "Community Outreach",
+        description:
+          "Environmental awareness campaigns and volunteer activities in the surrounding Hanoi neighborhoods.",
+      },
+      {
+        icon: "lightbulb",
+        title: "Policy Advocacy",
+        description:
+          "Working with university administration to implement sustainable policies across campus facilities.",
+      },
+    ],
+    address: "Room 102, C6 Building, Hanoi University of Science and Technology",
+    email: "contact@greencampus.hust.edu.vn",
+    website: "fb.com/greencampus.hust",
   },
   {
     id: "4",
@@ -36,6 +141,41 @@ export const clubs: Club[] = [
       "Sharpen your critical thinking and public speaking through weekly debates and tournaments.",
     memberCount: 39,
     tags: ["speaking", "logic", "competition"],
+    meetingFrequency: "Twice weekly",
+    icon: "forum",
+    vision:
+      "The Debate Society is a forum for rigorous intellectual exchange. We challenge students to articulate complex arguments with clarity and precision, develop empathy by defending positions they may personally oppose, and compete at national and international levels. We believe strong debate skills are foundational to leadership in any field.",
+    annualProjects: 8,
+    awards: 9,
+    activities: [
+      {
+        icon: "mic",
+        title: "Weekly Debates",
+        description:
+          "Structured debate sessions covering current affairs, philosophy, and academic topics in British Parliamentary format.",
+      },
+      {
+        icon: "emoji_events",
+        title: "Tournaments",
+        description:
+          "Participation in regional and national debate competitions, with internal prep rounds and coaching.",
+      },
+      {
+        icon: "record_voice_over",
+        title: "Public Speaking",
+        description:
+          "Workshops on rhetoric, presentation skills, and impromptu speaking for academic and professional contexts.",
+      },
+      {
+        icon: "menu_book",
+        title: "Research Workshops",
+        description:
+          "Training sessions on building evidence-based arguments, sourcing credible materials, and logical reasoning.",
+      },
+    ],
+    address: "Room 410, TC Building, Hanoi University of Science and Technology",
+    email: "contact@debate.hust.edu.vn",
+    website: "fb.com/debate.hust",
   },
   {
     id: "5",
@@ -45,6 +185,42 @@ export const clubs: Club[] = [
       "Weekly runs for all fitness levels. We train, race, and celebrate movement together.",
     memberCount: 120,
     tags: ["fitness", "outdoors", "health"],
+    meetingFrequency: "Daily runs",
+    icon: "directions_run",
+    vision:
+      "Running Club was founded on the belief that movement is medicine. We welcome runners of every level — from first-timers to marathon veterans — and build an inclusive community around shared miles, mutual encouragement, and physical wellbeing. We train together, race together, and celebrate every finish line together.",
+    annualProjects: 6,
+    awards: 5,
+    activities: [
+      {
+        icon: "sprint",
+        title: "Morning Runs",
+        description:
+          "Daily 6 AM group runs through the campus and surrounding park areas, all paces welcome.",
+      },
+      {
+        icon: "fitness_center",
+        title: "Strength Training",
+        description:
+          "Twice-weekly cross-training sessions focused on injury prevention and performance improvement.",
+      },
+      {
+        icon: "emoji_events",
+        title: "Race Participation",
+        description:
+          "Organized entries into city marathons, half-marathons, and student sport competitions as a team.",
+      },
+      {
+        icon: "favorite",
+        title: "Wellness Talks",
+        description:
+          "Monthly sessions on nutrition, recovery, mental health, and sustainable athletic habits for students.",
+      },
+    ],
+    address:
+      "Sports Complex, A8 Building, Hanoi University of Science and Technology",
+    email: "contact@runningclub.hust.edu.vn",
+    website: "fb.com/runningclub.hust",
   },
 ];
 

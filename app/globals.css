@@ -3,11 +3,25 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: #b90014;
+  --color-primary-container: #e31b23;
+  --color-on-primary: #ffffff;
+  --color-surface: #fcf8f9;
+  --color-surface-container-low: #f6f3f4;
+  --color-surface-container: #f0edee;
+  --color-surface-variant: #e5e2e3;
+  --color-outline-variant: #e7bdb8;
+  --color-on-surface: #1b1b1c;
+  --color-secondary-text: #5d5f5f;
 }
 
 body {
-  background-color: #f9fafb;
-  color: #111827;
+  background-color: #fcf8f9;
+  color: #1b1b1c;
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }

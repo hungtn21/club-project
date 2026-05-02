@@ -5,6 +5,12 @@ export type ClubCategory =
   | "Academic"
   | "Community";
 
+export interface ClubActivity {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export interface Club {
   id: string;
   name: string;
@@ -12,6 +18,15 @@ export interface Club {
   description: string;
   memberCount: number;
   tags: string[];
+  meetingFrequency: string;
+  icon: string;
+  vision: string;
+  annualProjects: number;
+  awards: number;
+  activities: ClubActivity[];
+  address: string;
+  email: string;
+  website: string;
 }
 
 export interface QuizOption {
