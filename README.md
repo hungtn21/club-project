@@ -6,7 +6,7 @@ Tài liệu này dành cho các thành viên trong team để hiểu cấu trúc
 
 ## Mục lục
 
-1. [Khởi động project](#1-khởi-động-project)
+1. [Khởi động pcoroject](#1-khởi-động-project)
 2. [Cấu trúc thư mục](#2-cấu-trúc-thư-mục)
 3. [Công nghệ sử dụng](#3-công-nghệ-sử-dụng)
 4. [Quy tắc code quan trọng](#4-quy-tắc-code-quan-trọng)

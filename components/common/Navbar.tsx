@@ -11,15 +11,15 @@ export default function Navbar() {
         <nav className="flex items-center gap-6">
           <Link
             href="/clubs"
-            className="text-sm text-gray-600 hover:text-gray-900"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
           >
-            Clubs
+            Câu lạc bộ
           </Link>
           <Link
             href="/quiz"
-            className="text-sm text-gray-600 hover:text-gray-900"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
           >
-            Quiz
+            Kiểm tra
           </Link>
         </nav>
       </Container>

@@ -17,8 +17,8 @@ export default async function ClubDetailPage({ params }: ClubDetailPageProps) {
 
   return (
     <Container className="flex flex-col gap-8">
-      <Link href="/clubs" className="text-sm text-gray-500 hover:text-gray-900">
-        ← Back to clubs
+      <Link href="/clubs" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+        ← Quay lại danh sách
       </Link>
       <Card className="flex flex-col gap-4">
         <div className="flex items-start justify-between">
@@ -28,7 +28,7 @@ export default async function ClubDetailPage({ params }: ClubDetailPageProps) {
           </span>
         </div>
         <p className="text-sm text-gray-600">{club.description}</p>
-        <p className="text-xs text-gray-400">{club.memberCount} members</p>
+        <p className="text-xs text-gray-400">{club.memberCount} thành viên</p>
         <div className="flex flex-wrap gap-2">
           {club.tags.map((tag) => (
             <span
@@ -40,7 +40,7 @@ export default async function ClubDetailPage({ params }: ClubDetailPageProps) {
           ))}
         </div>
         <div className="pt-2">
-          <Button variant="primary">Apply to Join</Button>
+          <Button variant="primary">Đăng ký tham gia</Button>
         </div>
       </Card>
     </Container>
