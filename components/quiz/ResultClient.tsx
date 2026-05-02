@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { quizQuestions } from "@/lib/mockData";
+import { quizQuestions, clubs } from "@/lib/mockData";
 import { ClubCategory } from "@/lib/types";
 
 const categoryLabels: Record<ClubCategory, string> = {
@@ -126,6 +126,13 @@ export default function ResultClient() {
   const top = sorted[0];
   const archetype = archetypes[top.cat];
 
+  const suggestedClubs = clubs
+    .map((club) => ({
+      club,
+      score: scores[club.category as ClubCategory],
+    }))
+    .sort((a, b) => b.score - a.score);
+
   return (
     <div className="flex flex-col gap-8">
       <Card className="flex flex-col gap-6">
@@ -184,12 +191,56 @@ export default function ResultClient() {
         </div>
       </Card>
 
+      <div className="flex flex-col gap-4">
+        <div>
+          <h2 className="text-base font-semibold text-gray-900">Câu lạc bộ dành cho bạn</h2>
+          <p className="mt-1 text-sm text-gray-500">
+            Gợi ý dựa trên kết quả bài kiểm tra của bạn.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {suggestedClubs.map(({ club, score }, index) => {
+            const matchPct = top.score > 0 ? Math.round((score / top.score) * 100) : 0;
+            return (
+              <Link key={club.id} href={`/clubs/${club.id}`} className="block">
+                <Card className="flex flex-col gap-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-base font-semibold text-gray-900">{club.name}</h3>
+                    {index === 0 && (
+                      <span className="shrink-0 rounded-md bg-gray-900 px-2 py-0.5 text-xs font-medium text-white">
+                        Phù hợp nhất
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-500 line-clamp-2">{club.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
+                        {categoryLabels[club.category as ClubCategory]}
+                      </span>
+                      <span className="text-xs text-gray-400">{club.memberCount} thành viên</span>
+                    </div>
+                    <span className="text-xs text-gray-400">{matchPct}%</span>
+                  </div>
+                  <div className="h-1 rounded-full bg-gray-100">
+                    <div
+                      className="h-full rounded-full bg-gray-900"
+                      style={{ width: `${matchPct}%` }}
+                    />
+                  </div>
+                </Card>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="flex items-center gap-3">
         <Link href="/quiz">
           <Button variant="secondary">Làm lại bài kiểm tra</Button>
         </Link>
         <Link href="/clubs">
-          <Button variant="primary">Xem danh sách CLB</Button>
+          <Button variant="primary">Xem tất cả CLB</Button>
         </Link>
       </div>
     </div>
