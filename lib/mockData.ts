@@ -6,42 +6,44 @@ export const clubs: Club[] = [
     name: "Dev Circle",
     category: "Technology",
     description:
-      "A community for developers to build, share, and grow together through projects and workshops.",
+      "Cộng đồng dành cho các lập trình viên cùng nhau xây dựng, chia sẻ và phát triển thông qua các dự án và hội thảo.",
     memberCount: 84,
+    size: "Medium",
+    isRecruiting: true,
     tags: ["coding", "open-source", "web"],
-    meetingFrequency: "Weekly meetups",
+    meetingFrequency: "Họp mặt hàng tuần",
     icon: "terminal",
     vision:
-      "We are dedicated to fostering a rigorous environment where students can explore advanced computing paradigms. Our mission is to bridge the gap between theoretical computer science and practical, industry-standard software engineering. By cultivating a culture of peer-driven learning and algorithmic thinking, we aim to produce the next generation of technical leaders.",
+      "Chúng tôi tận tâm nuôi dưỡng một môi trường nghiêm túc, nơi sinh viên có thể khám phá các mô hình máy tính tiên tiến. Sứ mệnh của chúng tôi là thu hẹp khoảng cách giữa khoa học máy tính lý thuyết và kỹ thuật phần mềm thực tế, tiêu chuẩn ngành. Bằng cách nuôi dưỡng văn hóa học tập đồng đẳng và tư duy thuật toán, chúng tôi đặt mục tiêu tạo ra thế hệ lãnh đạo kỹ thuật tiếp theo.",
     annualProjects: 24,
     awards: 6,
     activities: [
       {
         icon: "code",
-        title: "Coding Workshops",
+        title: "Hội thảo Lập trình",
         description:
-          "Weekly hands-on sessions covering web development, algorithms, and software engineering best practices.",
+          "Các buổi thực hành hàng tuần về phát triển web, thuật toán và các phương pháp kỹ thuật phần mềm tốt nhất.",
       },
       {
         icon: "hub",
-        title: "Open Source Projects",
+        title: "Dự án Mã nguồn mở",
         description:
-          "Collaborative contributions to open source projects, building real-world experience and portfolios.",
+          "Đóng góp chung vào các dự án mã nguồn mở, tích lũy kinh nghiệm thực tế và xây dựng hồ sơ năng lực.",
       },
       {
         icon: "developer_board",
         title: "Hackathons",
         description:
-          "Intensive 48-hour coding challenges designed to foster rapid prototyping and creative problem-solving.",
+          "Thử thách lập trình cường độ cao trong 48 giờ được thiết kế để thúc đẩy tạo mẫu nhanh và giải quyết vấn đề sáng tạo.",
       },
       {
         icon: "school",
         title: "Tech Talks",
         description:
-          "Monthly speaker sessions from industry professionals sharing insights on emerging technologies and career paths.",
+          "Các buổi trò chuyện hàng tháng với diễn giả từ các chuyên gia trong ngành chia sẻ hiểu biết về các công nghệ mới nổi và con đường sự nghiệp.",
       },
     ],
-    address: "Room 201, D9 Building, Hanoi University of Science and Technology",
+    address: "Phòng 201, Nhà D9, Đại học Bách Khoa Hà Nội",
     email: "contact@devcircle.hust.edu.vn",
     website: "fb.com/devcircle.hust",
   },
@@ -50,42 +52,44 @@ export const clubs: Club[] = [
     name: "Design Lab",
     category: "Arts",
     description:
-      "Explore UI/UX, graphic design, and creative thinking in a collaborative studio environment.",
+      "Khám phá UI/UX, thiết kế đồ họa và tư duy sáng tạo trong môi trường studio hợp tác.",
     memberCount: 52,
+    size: "Small",
+    isRecruiting: false,
     tags: ["design", "ui", "creativity"],
-    meetingFrequency: "Thu evenings",
+    meetingFrequency: "Tối thứ Năm",
     icon: "brush",
     vision:
-      "Design Lab exists to nurture the creative minds of tomorrow. We believe that great design is the intersection of art and technology. Our studio provides a collaborative space for students to develop their visual literacy, user empathy, and design thinking skills while building a portfolio that stands out.",
+      "Design Lab tồn tại để nuôi dưỡng những bộ óc sáng tạo của tương lai. Chúng tôi tin rằng thiết kế tuyệt vời là sự giao thoa giữa nghệ thuật và công nghệ. Studio của chúng tôi cung cấp không gian cộng tác để sinh viên phát triển khả năng thẩm mỹ, sự thấu hiểu người dùng và kỹ năng tư duy thiết kế trong khi xây dựng một hồ sơ năng lực nổi bật.",
     annualProjects: 18,
     awards: 4,
     activities: [
       {
         icon: "palette",
-        title: "Design Critiques",
+        title: "Phê bình Thiết kế",
         description:
-          "Regular peer review sessions where members present work and receive structured, constructive feedback.",
+          "Các buổi đánh giá định kỳ nơi các thành viên trình bày tác phẩm và nhận phản hồi có cấu trúc, mang tính xây dựng.",
       },
       {
         icon: "devices",
         title: "UI/UX Sprints",
         description:
-          "Fast-paced product design sprints simulating real agency workflows and client deliverables.",
+          "Các đợt thiết kế sản phẩm tốc độ cao mô phỏng quy trình làm việc thực tế của các agency và kết quả bàn giao cho khách hàng.",
       },
       {
         icon: "photo_camera",
-        title: "Visual Storytelling",
+        title: "Kể chuyện bằng Hình ảnh",
         description:
-          "Photography and illustration workshops focused on communicating ideas through compelling visuals.",
+          "Hội thảo nhiếp ảnh và minh họa tập trung vào việc truyền đạt ý tưởng thông qua hình ảnh hấp dẫn.",
       },
       {
         icon: "groups",
-        title: "Industry Mentorship",
+        title: "Cố vấn từ Ngành",
         description:
-          "One-on-one sessions with professional designers from leading product companies and agencies.",
+          "Các buổi làm việc một-một với các nhà thiết kế chuyên nghiệp từ các công ty sản phẩm và agency hàng đầu.",
       },
     ],
-    address: "Room 305, B1 Building, Hanoi University of Science and Technology",
+    address: "Phòng 305, Nhà B1, Đại học Bách Khoa Hà Nội",
     email: "contact@designlab.hust.edu.vn",
     website: "fb.com/designlab.hust",
   },
@@ -94,42 +98,44 @@ export const clubs: Club[] = [
     name: "Green Campus",
     category: "Community",
     description:
-      "Driving sustainability initiatives on campus through events, research, and advocacy.",
+      "Thúc đẩy các sáng kiến bền vững trong khuôn viên trường thông qua các sự kiện, nghiên cứu và vận động.",
     memberCount: 67,
+    size: "Medium",
+    isRecruiting: true,
     tags: ["environment", "volunteer", "campus"],
-    meetingFrequency: "Monthly meetings",
+    meetingFrequency: "Họp hàng tháng",
     icon: "eco",
     vision:
-      "Green Campus is committed to transforming our university into a model of environmental responsibility. We work at the intersection of student activism, scientific research, and community engagement to drive meaningful change. Every initiative we run is designed to educate, inspire, and create lasting impact beyond the campus borders.",
+      "Green Campus cam kết biến trường đại học của chúng ta thành một mô hình về trách nhiệm môi trường. Chúng tôi làm việc tại điểm giao thoa giữa hoạt động sinh viên, nghiên cứu khoa học và sự tham gia của cộng đồng để thúc đẩy sự thay đổi có ý nghĩa. Mọi sáng kiến chúng tôi thực hiện đều được thiết kế để giáo dục, truyền cảm hứng và tạo ra tác động lâu dài vượt ra ngoài khuôn viên trường.",
     annualProjects: 12,
     awards: 3,
     activities: [
       {
         icon: "recycling",
-        title: "Campus Recycling Drives",
+        title: "Chiến dịch Tái chế Học đường",
         description:
-          "Organizing campus-wide waste collection events and educating students on responsible recycling practices.",
+          "Tổ chức các sự kiện thu gom rác thải toàn trường và giáo dục sinh viên về các thực hành tái chế có trách nhiệm.",
       },
       {
         icon: "forest",
-        title: "Green Research",
+        title: "Nghiên cứu Xanh",
         description:
-          "Student-led sustainability research projects in partnership with the university's environmental science department.",
+          "Các dự án nghiên cứu về tính bền vững do sinh viên dẫn đầu phối hợp với khoa khoa học môi trường của trường.",
       },
       {
         icon: "volunteer_activism",
-        title: "Community Outreach",
+        title: "Tiếp cận Cộng đồng",
         description:
-          "Environmental awareness campaigns and volunteer activities in the surrounding Hanoi neighborhoods.",
+          "Các chiến dịch nâng cao nhận thức về môi trường và các hoạt động tình nguyện tại các khu dân cư lân cận ở Hà Nội.",
       },
       {
         icon: "lightbulb",
-        title: "Policy Advocacy",
+        title: "Vận động Chính sách",
         description:
-          "Working with university administration to implement sustainable policies across campus facilities.",
+          "Làm việc với ban giám hiệu nhà trường để thực hiện các chính sách bền vững tại các cơ sở vật chất trong khuôn viên trường.",
       },
     ],
-    address: "Room 102, C6 Building, Hanoi University of Science and Technology",
+    address: "Phòng 102, Nhà C6, Đại học Bách Khoa Hà Nội",
     email: "contact@greencampus.hust.edu.vn",
     website: "fb.com/greencampus.hust",
   },
@@ -138,42 +144,44 @@ export const clubs: Club[] = [
     name: "Debate Society",
     category: "Academic",
     description:
-      "Sharpen your critical thinking and public speaking through weekly debates and tournaments.",
+      "Rèn luyện tư duy phản biện và kỹ năng thuyết trình trước công chúng thông qua các buổi tranh biện và giải đấu hàng tuần.",
     memberCount: 39,
+    size: "Small",
+    isRecruiting: true,
     tags: ["speaking", "logic", "competition"],
-    meetingFrequency: "Twice weekly",
+    meetingFrequency: "Hai lần mỗi tuần",
     icon: "forum",
     vision:
-      "The Debate Society is a forum for rigorous intellectual exchange. We challenge students to articulate complex arguments with clarity and precision, develop empathy by defending positions they may personally oppose, and compete at national and international levels. We believe strong debate skills are foundational to leadership in any field.",
+      "Hội Tranh biện là diễn đàn để trao đổi trí tuệ nghiêm túc. Chúng tôi thách thức sinh viên trình bày các lập luận phức tạp một cách rõ ràng và chính xác, phát triển sự thấu cảm bằng cách bảo vệ các quan điểm mà họ có thể phản đối cá nhân và thi đấu ở cấp quốc gia và quốc tế. Chúng tôi tin rằng kỹ năng tranh biện mạnh mẽ là nền tảng cho sự lãnh đạo trong bất kỳ lĩnh vực nào.",
     annualProjects: 8,
     awards: 9,
     activities: [
       {
         icon: "mic",
-        title: "Weekly Debates",
+        title: "Tranh biện Hàng tuần",
         description:
-          "Structured debate sessions covering current affairs, philosophy, and academic topics in British Parliamentary format.",
+          "Các buổi tranh biện có cấu trúc về các vấn đề thời sự, triết học và các chủ đề học thuật theo định dạng Nghị viện Anh.",
       },
       {
         icon: "emoji_events",
-        title: "Tournaments",
+        title: "Giải đấu",
         description:
-          "Participation in regional and national debate competitions, with internal prep rounds and coaching.",
+          "Tham gia các cuộc thi tranh biện khu vực và quốc gia, với các vòng chuẩn bị nội bộ và huấn luyện.",
       },
       {
         icon: "record_voice_over",
-        title: "Public Speaking",
+        title: "Nói trước Công chúng",
         description:
-          "Workshops on rhetoric, presentation skills, and impromptu speaking for academic and professional contexts.",
+          "Hội thảo về hùng biện, kỹ năng thuyết trình và nói ứng biến trong bối cảnh học thuật và chuyên nghiệp.",
       },
       {
         icon: "menu_book",
-        title: "Research Workshops",
+        title: "Hội thảo Nghiên cứu",
         description:
-          "Training sessions on building evidence-based arguments, sourcing credible materials, and logical reasoning.",
+          "Các buổi đào tạo về xây dựng lập luận dựa trên bằng chứng, tìm kiếm tài liệu đáng tin cậy và tư duy logic.",
       },
     ],
-    address: "Room 410, TC Building, Hanoi University of Science and Technology",
+    address: "Phòng 410, Nhà TC, Đại học Bách Khoa Hà Nội",
     email: "contact@debate.hust.edu.vn",
     website: "fb.com/debate.hust",
   },
@@ -182,43 +190,44 @@ export const clubs: Club[] = [
     name: "Running Club",
     category: "Sports",
     description:
-      "Weekly runs for all fitness levels. We train, race, and celebrate movement together.",
+      "Chạy bộ hàng tuần cho mọi cấp độ thể lực. Chúng tôi cùng nhau tập luyện, thi đấu và tôn vinh sự vận động.",
     memberCount: 120,
+    size: "Large",
+    isRecruiting: false,
     tags: ["fitness", "outdoors", "health"],
-    meetingFrequency: "Daily runs",
+    meetingFrequency: "Chạy bộ hàng ngày",
     icon: "directions_run",
     vision:
-      "Running Club was founded on the belief that movement is medicine. We welcome runners of every level — from first-timers to marathon veterans — and build an inclusive community around shared miles, mutual encouragement, and physical wellbeing. We train together, race together, and celebrate every finish line together.",
+      "Câu lạc bộ Chạy bộ được thành lập trên niềm tin rằng vận động là liều thuốc. Chúng tôi chào đón những người chạy ở mọi cấp độ — từ những người mới bắt đầu đến những người kỳ cựu chạy marathon — và xây dựng một cộng đồng hòa nhập xung quanh những dặm đường chia sẻ, sự khuyến khích lẫn nhau và sức khỏe thể chất. Chúng tôi cùng nhau tập luyện, cùng nhau thi đấu và cùng nhau ăn mừng mỗi vạch đích.",
     annualProjects: 6,
     awards: 5,
     activities: [
       {
         icon: "sprint",
-        title: "Morning Runs",
+        title: "Chạy bộ buổi sáng",
         description:
-          "Daily 6 AM group runs through the campus and surrounding park areas, all paces welcome.",
+          "Chạy bộ nhóm hàng ngày lúc 6 giờ sáng qua khuôn viên trường và các khu vực công viên lân cận, chào đón mọi tốc độ.",
       },
       {
         icon: "fitness_center",
-        title: "Strength Training",
+        title: "Tập luyện Sức mạnh",
         description:
-          "Twice-weekly cross-training sessions focused on injury prevention and performance improvement.",
+          "Các buổi tập bổ trợ hai lần mỗi tuần tập trung vào phòng tránh chấn thương và cải thiện hiệu suất.",
       },
       {
         icon: "emoji_events",
-        title: "Race Participation",
+        title: "Tham gia Giải chạy",
         description:
-          "Organized entries into city marathons, half-marathons, and student sport competitions as a team.",
+          "Tổ chức tham gia các giải chạy marathon, bán marathon của thành phố và các cuộc thi thể thao sinh viên dưới danh nghĩa đồng đội.",
       },
       {
         icon: "favorite",
-        title: "Wellness Talks",
+        title: "Trò chuyện Sức khỏe",
         description:
-          "Monthly sessions on nutrition, recovery, mental health, and sustainable athletic habits for students.",
+          "Các buổi trò chuyện hàng tháng về dinh dưỡng, phục hồi, sức khỏe tâm thần và thói quen thể thao bền vững cho sinh viên.",
       },
     ],
-    address:
-      "Sports Complex, A8 Building, Hanoi University of Science and Technology",
+    address: "Khu liên hợp thể thao, Nhà A8, Đại học Bách Khoa Hà Nội",
     email: "contact@runningclub.hust.edu.vn",
     website: "fb.com/runningclub.hust",
   },

@@ -5,6 +5,8 @@ export type ClubCategory =
   | "Academic"
   | "Community";
 
+export type ClubSize = "Small" | "Medium" | "Large";
+
 export interface ClubActivity {
   icon: string;
   title: string;
@@ -17,6 +19,8 @@ export interface Club {
   category: ClubCategory;
   description: string;
   memberCount: number;
+  size: ClubSize;
+  isRecruiting: boolean;
   tags: string[];
   meetingFrequency: string;
   icon: string;
