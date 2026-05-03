@@ -32,6 +32,14 @@ const categoryStyle: Record<
   },
 };
 
+const categoryTranslations: Record<ClubCategory, string> = {
+  Technology: "Công nghệ",
+  Community: "Cộng đồng",
+  Sports: "Thể thao",
+  Arts: "Nghệ thuật",
+  Academic: "Học thuật",
+};
+
 interface ClubCardProps {
   club: Club;
 }
@@ -57,7 +65,7 @@ export default function ClubCard({ club }: ClubCardProps) {
             <span
               className={`inline-block px-2.5 py-1 ${style.badge} font-medium text-xs rounded-full mb-1`}
             >
-              {club.category}
+              {categoryTranslations[club.category]}
             </span>
             <h3 className="text-xl font-bold text-gray-900 line-clamp-1">
               {club.name}

@@ -1,9 +1,9 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import Container from "@/components/ui/Container";
-import Card from "@/components/ui/Card";
-import Button from "@/components/ui/Button";
-import { clubs } from "@/lib/mockData";
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import Container from '@/components/ui/Container';
+import Card from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
+import { clubs } from '@/lib/mockData';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -39,12 +39,17 @@ export default async function ClubDetailPage({ params }: Props) {
             {club.description}
           </p>
           <div className="flex gap-4 mt-2">
-            <Button variant="primary" className="px-8 py-3 flex items-center gap-2">
-              <span>Join the Club</span>
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            <Button
+              variant="primary"
+              className="px-8 py-3 flex items-center gap-2"
+            >
+              <span>Tham gia câu lạc bộ</span>
+              <span className="material-symbols-outlined text-sm">
+                arrow_forward
+              </span>
             </Button>
             <Button variant="secondary" className="px-8 py-3">
-              Contact Us
+              Liên hệ với chúng tôi
             </Button>
           </div>
         </Container>
@@ -141,10 +146,10 @@ export default async function ClubDetailPage({ params }: Props) {
               </span>
               <div>
                 <p className="text-sm font-semibold text-on-surface">
-                  {club.address.split(",")[0]}
+                  {club.address.split(',')[0]}
                 </p>
                 <p className="text-sm text-secondary-text">
-                  {club.address.split(",").slice(1).join(",")}
+                  {club.address.split(',').slice(1).join(',')}
                 </p>
               </div>
             </div>
