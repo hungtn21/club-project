@@ -13,6 +13,17 @@ export interface ClubActivity {
   description: string;
 }
 
+export interface RecruitmentPosition {
+  title: string;
+  quota: number;
+}
+
+export interface SelectionStage {
+  order: number;
+  name: string;
+  description: string;
+}
+
 export interface Club {
   id: string;
   name: string;
@@ -21,6 +32,10 @@ export interface Club {
   memberCount: number;
   size: ClubSize;
   isRecruiting: boolean;
+  recruitmentDeadline?: string;
+  recruitingPositions?: RecruitmentPosition[];
+  recruitmentPositionsText?: string[]; // for backward compatibility
+  selectionStages?: SelectionStage[];
   tags: string[];
   meetingFrequency: string;
   icon: string;
