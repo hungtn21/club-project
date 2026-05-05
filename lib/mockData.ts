@@ -10,7 +10,7 @@ export const clubs: Club[] = [
     memberCount: 84,
     size: "Medium",
     isRecruiting: true,
-    recruitmentDeadline: "2025-05-20",
+    recruitmentDeadline: "2026-05-20",
     recruitingPositions: [
       { title: "Lập trình viên Backend", quota: 8 },
       { title: "Lập trình viên Frontend", quota: 6 },
@@ -114,7 +114,7 @@ export const clubs: Club[] = [
     memberCount: 67,
     size: "Medium",
     isRecruiting: true,
-    recruitmentDeadline: "2025-05-25",
+    recruitmentDeadline: "2026-05-25",
     recruitingPositions: [
       { title: "Điều phối sự kiện", quota: 5 },
       { title: "Tiếp cận Cộng đồng", quota: 7 },
@@ -169,7 +169,7 @@ export const clubs: Club[] = [
     description:
       "Rèn luyện tư duy phản biện và kỹ năng thuyết trình trước công chúng thông qua các buổi tranh biện và giải đấu hàng tuần.",
     memberCount: 39,
-    recruitmentDeadline: "2025-05-15",
+    recruitmentDeadline: "2026-05-01",
     recruitingPositions: [
       { title: "Thành viên Tranh biện", quota: 10 },
       { title: "Huấn luyện viên", quota: 3 },

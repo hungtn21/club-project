@@ -42,6 +42,10 @@ interface RecruitmentCardProps {
 export default function RecruitmentCard({ club, onSelect }: RecruitmentCardProps) {
   if (!club.isRecruiting) return null;
 
+  const isClosed = club.recruitmentDeadline
+    ? Math.ceil((new Date(club.recruitmentDeadline).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)) <= 0
+    : false;
+
   const formatDeadline = (dateString?: string) => {
     if (!dateString) return "Đang mở";
     const date = new Date(dateString);
@@ -126,17 +130,21 @@ export default function RecruitmentCard({ club, onSelect }: RecruitmentCardProps
 
         {/* Deadline and button */}
         <div className="flex items-center justify-between">
-          <div className="text-xs font-medium text-gray-500">
+          <div className={`text-xs font-medium ${isClosed ? 'text-red-500' : 'text-gray-500'}`}>
             <span className="material-symbols-outlined" style={{ fontSize: "16px", marginRight: "4px", verticalAlign: "middle" }}>
               schedule
             </span>
             {formatDeadline(club.recruitmentDeadline)}
           </div>
           <button
-            onClick={() => onSelect?.(club)}
-            className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            onClick={() => !isClosed && onSelect?.(club)}
+            disabled={isClosed}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${isClosed
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-blue-600 text-white hover:bg-blue-700"
+              }`}
           >
-            Ứng tuyển
+            {isClosed ? "Hết hạn" : "Ứng tuyển"}
           </button>
         </div>
       </div>
