@@ -89,6 +89,10 @@ export default function RecruitmentDetailModal({
     onClose();
   };
 
+  const isClosed = club.recruitmentDeadline 
+    ? Math.ceil((new Date(club.recruitmentDeadline).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)) <= 0 
+    : false;
+
   const totalQuota =
     club.recruitingPositions
       ?.reduce((sum, pos) => sum + (typeof pos === 'string' ? 0 : pos.quota), 0)
@@ -134,9 +138,9 @@ export default function RecruitmentDetailModal({
                 </div>
                 <div>
                   <p className="text-gray-500 mb-1">Hạn chót ứng tuyển</p>
-                  <p className="text-gray-900 font-semibold">
+                  <p className={`font-semibold ${isClosed ? 'text-red-500' : 'text-gray-900'}`}>
                     {club.recruitmentDeadline
-                      ? new Date(club.recruitmentDeadline).toLocaleDateString("vi-VN")
+                      ? `${new Date(club.recruitmentDeadline).toLocaleDateString("vi-VN")}${isClosed ? " (Đã đóng)" : ""}`
                       : "Đang mở"}
                   </p>
                 </div>
@@ -328,9 +332,14 @@ export default function RecruitmentDetailModal({
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                    disabled={isClosed}
+                    className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                      isClosed 
+                        ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
+                        : "bg-blue-600 text-white hover:bg-blue-700"
+                    }`}
                   >
-                    Ứng tuyển
+                    {isClosed ? "Hết hạn" : "Ứng tuyển"}
                   </button>
                 </div>
               </form>
