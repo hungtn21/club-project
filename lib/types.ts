@@ -3,7 +3,13 @@ export type ClubCategory =
   | "Arts"
   | "Sports"
   | "Academic"
-  | "Community";
+  | "Community"
+  | "Performance"
+  | "Mind Sports"
+  | "Communication"
+  | "Social Impact"
+  | "Business"
+  | "Culture";
 
 export type ClubSize = "Small" | "Medium" | "Large";
 
