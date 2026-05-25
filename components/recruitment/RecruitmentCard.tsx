@@ -10,10 +10,10 @@ const categoryIcon: Record<ClubCategory, string> = {
   Academic: "school",
   Performance: "theater_comedy",
   "Mind Sports": "psychology",
-  Communication: "record_voice_over",
+  Communication: "forum",
   "Social Impact": "volunteer_activism",
-  Business: "rocket_launch",
-  Culture: "travel_explore",
+  Business: "business_center",
+  Culture: "language",
 };
 
 const categoryLabel: Record<ClubCategory, string> = {
@@ -39,8 +39,8 @@ const categoryBg: Record<ClubCategory, string> = {
   Performance: "bg-pink-50",
   "Mind Sports": "bg-cyan-50",
   Communication: "bg-teal-50",
-  "Social Impact": "bg-emerald-50",
-  Business: "bg-orange-50",
+  "Social Impact": "bg-orange-50",
+  Business: "bg-yellow-50",
   Culture: "bg-rose-50",
 };
 
@@ -53,8 +53,8 @@ const categoryBadge: Record<ClubCategory, string> = {
   Performance: "bg-pink-100 text-pink-700",
   "Mind Sports": "bg-cyan-100 text-cyan-700",
   Communication: "bg-teal-100 text-teal-700",
-  "Social Impact": "bg-emerald-100 text-emerald-700",
-  Business: "bg-orange-100 text-orange-700",
+  "Social Impact": "bg-orange-100 text-orange-700",
+  Business: "bg-yellow-100 text-yellow-700",
   Culture: "bg-rose-100 text-rose-700",
 };
 
