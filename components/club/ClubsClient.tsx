@@ -3,17 +3,30 @@
 import { useState } from "react";
 import { Club } from "@/lib/types";
 import ClubCard from "@/components/club/ClubCard";
+import { personalityTags } from "@/lib/mockData";
 
 interface ClubsClientProps {
   clubs: Club[];
 }
 
-const categoryTranslations: Record<string, string> = {
-  Technology: "Công nghệ",
-  Community: "Cộng đồng",
-  Sports: "Thể thao",
-  Arts: "Nghệ thuật",
-  Academic: "Học thuật",
+const personalityTagTranslations: Record<string, string> = {
+  leadership: "Lãnh đạo",
+  creative: "Sáng tạo",
+  technical: "Kỹ thuật",
+  communication: "Giao tiếp",
+  teamwork: "Làm việc nhóm",
+  discipline: "Kỷ luật",
+  competitive: "Cạnh tranh",
+  performance: "Biểu diễn",
+  "strategic-thinking": "Tư duy chiến lược",
+  confidence: "Tự tin",
+  analytical: "Phân tích",
+  "learning-driven": "Ham học hỏi",
+  resilience: "Kiên trì",
+  "social-impact": "Tác động xã hội",
+  business: "Kinh doanh",
+  "problem-solving": "Giải quyết vấn đề",
+  "cultural-awareness": "Hiểu biết văn hóa",
 };
 
 const sizeTranslations: Record<string, string> = {
@@ -24,18 +37,20 @@ const sizeTranslations: Record<string, string> = {
 
 export default function ClubsClient({ clubs }: ClubsClientProps) {
   const [query, setQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedTag, setSelectedTag] = useState<string>("All");
   const [selectedSize, setSelectedSize] = useState<string>("All");
   const [selectedRecruiting, setSelectedRecruiting] = useState<string>("All");
 
   const filtered = clubs.filter((c) => {
     const matchesQuery =
       c.name.toLowerCase().includes(query.toLowerCase()) ||
-      categoryTranslations[c.category].toLowerCase().includes(query.toLowerCase()) ||
-      c.description.toLowerCase().includes(query.toLowerCase());
+      c.description.toLowerCase().includes(query.toLowerCase()) ||
+      c.tags.some((tag) =>
+        personalityTagTranslations[tag]?.toLowerCase().includes(query.toLowerCase())
+      );
 
-    const matchesCategory =
-      selectedCategory === "All" || c.category === selectedCategory;
+    const matchesTag =
+      selectedTag === "All" || c.tags.includes(selectedTag);
 
     const matchesSize =
       selectedSize === "All" || c.size === selectedSize;
@@ -45,7 +60,7 @@ export default function ClubsClient({ clubs }: ClubsClientProps) {
       (selectedRecruiting === "true" && c.isRecruiting) ||
       (selectedRecruiting === "false" && !c.isRecruiting);
 
-    return matchesQuery && matchesCategory && matchesSize && matchesRecruiting;
+    return matchesQuery && matchesTag && matchesSize && matchesRecruiting;
   });
 
   return (
@@ -62,7 +77,7 @@ export default function ClubsClient({ clubs }: ClubsClientProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Tìm kiếm CLB, thể loại..."
+            placeholder="Tìm kiếm CLB, personality..."
             className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-full text-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-colors"
           />
         </div>
@@ -76,14 +91,14 @@ export default function ClubsClient({ clubs }: ClubsClientProps) {
               filter_list
             </span>
             <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              value={selectedTag}
+              onChange={(e) => setSelectedTag(e.target.value)}
               className="w-full sm:w-auto appearance-none pl-10 pr-8 py-2 bg-white border border-gray-200 rounded-full text-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-colors cursor-pointer text-gray-700"
             >
-              <option value="All">Tất cả thể loại</option>
-              {Object.entries(categoryTranslations).map(([key, value]) => (
-                <option key={key} value={key}>
-                  {value}
+              <option value="All">Tất cả personality</option>
+              {personalityTags.map((tag) => (
+                <option key={tag} value={tag}>
+                  {personalityTagTranslations[tag]}
                 </option>
               ))}
             </select>

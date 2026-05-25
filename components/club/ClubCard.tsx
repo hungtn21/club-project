@@ -30,6 +30,36 @@ const categoryStyle: Record<
     badge: "bg-blue-50 text-blue-700",
     bar: "bg-blue-600",
   },
+  Performance: {
+    gradient: "bg-gradient-to-br from-purple-500 to-purple-700",
+    badge: "bg-purple-50 text-purple-700",
+    bar: "bg-purple-600",
+  },
+  "Mind Sports": {
+    gradient: "bg-gradient-to-br from-indigo-500 to-indigo-700",
+    badge: "bg-indigo-50 text-indigo-700",
+    bar: "bg-indigo-600",
+  },
+  Communication: {
+    gradient: "bg-gradient-to-br from-teal-500 to-teal-700",
+    badge: "bg-teal-50 text-teal-700",
+    bar: "bg-teal-600",
+  },
+  "Social Impact": {
+    gradient: "bg-gradient-to-br from-green-500 to-green-700",
+    badge: "bg-green-50 text-green-700",
+    bar: "bg-green-600",
+  },
+  Business: {
+    gradient: "bg-gradient-to-br from-orange-500 to-orange-700",
+    badge: "bg-orange-50 text-orange-700",
+    bar: "bg-orange-600",
+  },
+  Culture: {
+    gradient: "bg-gradient-to-br from-pink-500 to-pink-700",
+    badge: "bg-pink-50 text-pink-700",
+    bar: "bg-pink-600",
+  },
 };
 
 const categoryTranslations: Record<ClubCategory, string> = {
@@ -38,6 +68,12 @@ const categoryTranslations: Record<ClubCategory, string> = {
   Sports: "Thể thao",
   Arts: "Nghệ thuật",
   Academic: "Học thuật",
+  Performance: "Biểu diễn",
+  "Mind Sports": "Thể thao trí tuệ",
+  Communication: "Giao tiếp",
+  "Social Impact": "Tác động xã hội",
+  Business: "Kinh doanh",
+  Culture: "Văn hóa",
 };
 
 interface ClubCardProps {
