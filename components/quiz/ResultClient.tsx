@@ -13,6 +13,12 @@ const categoryLabels: Record<ClubCategory, string> = {
   Sports: "Thể thao",
   Academic: "Học thuật",
   Community: "Cộng đồng",
+  Performance: "Biểu diễn",
+  "Mind Sports": "Thể thao trí tuệ",
+  Communication: "Giao tiếp",
+  "Social Impact": "Tác động xã hội",
+  Business: "Kinh doanh",
+  Culture: "Văn hóa",
 };
 
 const archetypes: Record<
@@ -69,6 +75,66 @@ const archetypes: Record<
       "Đồng cảm và tạo động lực",
     ],
   },
+  Performance: {
+    title: "Người Nghệ Sĩ",
+    description:
+      "Sân khấu và ánh đèn là nơi bạn tỏa sáng. Bạn có khả năng truyền tải cảm xúc qua cơ thể, giọng nói và thể hiện bản thân một cách nghệ thuật.",
+    strengths: [
+      "Biểu cảm và cảm xúc tốt",
+      "Tự tin trước đám đông",
+      "Kỷ luật luyện tập",
+    ],
+  },
+  "Mind Sports": {
+    title: "Người Chiến Lược",
+    description:
+      "Tư duy logic, tính toán và chiến lược là thế mạnh của bạn. Bạn thích những thử thách trí tuệ và luôn suy nghĩ nhiều bước về phía trước.",
+    strengths: [
+      "Tư duy chiến thuật sâu sắc",
+      "Khả năng tính toán chính xác",
+      "Kiên nhẫn và tập trung cao",
+    ],
+  },
+  Communication: {
+    title: "Người Diễn Đạt",
+    description:
+      "Ngôn từ và giao tiếp là công cụ mạnh mẽ của bạn. Bạn có khả năng thuyết phục, truyền cảm hứng và kết nối với người khác qua lời nói.",
+    strengths: [
+      "Kỹ năng thuyết trình xuất sắc",
+      "Tư duy lập luận mạch lạc",
+      "Tự tin và cuốn hút",
+    ],
+  },
+  "Social Impact": {
+    title: "Người Tạo Thay Đổi",
+    description:
+      "Trách nhiệm xã hội và tác động cộng đồng là động lực của bạn. Bạn muốn tạo ra những thay đổi tích cực và đóng góp cho một thế giới tốt đẹp hơn.",
+    strengths: [
+      "Tinh thần trách nhiệm cao",
+      "Đồng cảm và quan tâm xã hội",
+      "Khả năng tổ chức và dẫn dắt",
+    ],
+  },
+  Business: {
+    title: "Người Khởi Nghiệp",
+    description:
+      "Tư duy kinh doanh và đổi mới là đặc trưng của bạn. Bạn thích tìm kiếm cơ hội, xây dựng dự án và biến ý tưởng thành giá trị thực tế.",
+    strengths: [
+      "Tư duy kinh doanh nhạy bén",
+      "Khả năng lãnh đạo và tổ chức",
+      "Sáng tạo và chủ động",
+    ],
+  },
+  Culture: {
+    title: "Người Giao Lưu",
+    description:
+      "Văn hóa và kết nối con người là niềm đam mê của bạn. Bạn thích khám phá, học hỏi và chia sẻ về các nền văn hóa khác nhau.",
+    strengths: [
+      "Cởi mở và hiểu biết văn hóa",
+      "Kỹ năng giao tiếp đa văn hóa",
+      "Tinh thần học hỏi và chia sẻ",
+    ],
+  },
 };
 
 const ALL_CATEGORIES: ClubCategory[] = [
@@ -77,6 +143,12 @@ const ALL_CATEGORIES: ClubCategory[] = [
   "Sports",
   "Academic",
   "Community",
+  "Performance",
+  "Mind Sports",
+  "Communication",
+  "Social Impact",
+  "Business",
+  "Culture",
 ];
 
 export default function ResultClient() {
@@ -103,6 +175,12 @@ export default function ResultClient() {
     Sports: 0,
     Academic: 0,
     Community: 0,
+    Performance: 0,
+    "Mind Sports": 0,
+    Communication: 0,
+    "Social Impact": 0,
+    Business: 0,
+    Culture: 0,
   };
 
   for (const question of quizQuestions) {

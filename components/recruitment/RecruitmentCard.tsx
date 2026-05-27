@@ -8,6 +8,12 @@ const categoryIcon: Record<ClubCategory, string> = {
   Sports: "sports_basketball",
   Community: "eco",
   Academic: "school",
+  Performance: "theater_comedy",
+  "Mind Sports": "psychology",
+  Communication: "record_voice_over",
+  "Social Impact": "volunteer_activism",
+  Business: "rocket_launch",
+  Culture: "travel_explore",
 };
 
 const categoryLabel: Record<ClubCategory, string> = {
@@ -16,6 +22,12 @@ const categoryLabel: Record<ClubCategory, string> = {
   Sports: "Thể thao",
   Community: "Cộng đồng",
   Academic: "Học thuật",
+  Performance: "Biểu diễn",
+  "Mind Sports": "Thể thao trí tuệ",
+  Communication: "Giao tiếp",
+  "Social Impact": "Tác động xã hội",
+  Business: "Kinh doanh",
+  Culture: "Văn hóa",
 };
 
 const categoryBg: Record<ClubCategory, string> = {
@@ -24,6 +36,12 @@ const categoryBg: Record<ClubCategory, string> = {
   Sports: "bg-green-50",
   Community: "bg-amber-50",
   Academic: "bg-indigo-50",
+  Performance: "bg-pink-50",
+  "Mind Sports": "bg-cyan-50",
+  Communication: "bg-teal-50",
+  "Social Impact": "bg-emerald-50",
+  Business: "bg-orange-50",
+  Culture: "bg-rose-50",
 };
 
 const categoryBadge: Record<ClubCategory, string> = {
@@ -32,6 +50,12 @@ const categoryBadge: Record<ClubCategory, string> = {
   Sports: "bg-green-100 text-green-700",
   Community: "bg-amber-100 text-amber-700",
   Academic: "bg-indigo-100 text-indigo-700",
+  Performance: "bg-pink-100 text-pink-700",
+  "Mind Sports": "bg-cyan-100 text-cyan-700",
+  Communication: "bg-teal-100 text-teal-700",
+  "Social Impact": "bg-emerald-100 text-emerald-700",
+  Business: "bg-orange-100 text-orange-700",
+  Culture: "bg-rose-100 text-rose-700",
 };
 
 interface RecruitmentCardProps {

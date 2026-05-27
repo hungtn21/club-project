@@ -12,6 +12,12 @@ const categories: { value: ClubCategory | "all"; label: string }[] = [
   { value: "Sports", label: "Thể thao" },
   { value: "Academic", label: "Học thuật" },
   { value: "Community", label: "Cộng đồng" },
+  { value: "Performance", label: "Biểu diễn" },
+  { value: "Mind Sports", label: "Thể thao trí tuệ" },
+  { value: "Communication", label: "Giao tiếp" },
+  { value: "Social Impact", label: "Tác động xã hội" },
+  { value: "Business", label: "Kinh doanh" },
+  { value: "Culture", label: "Văn hóa" },
 ];
 
 interface RecruitmentClientProps {

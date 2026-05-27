@@ -1,17 +1,17 @@
 export type ClubCategory =
-  | "Technology"
-  | "Arts"
-  | "Sports"
-  | "Academic"
-  | "Community"
-  | "Performance"
-  | "Mind Sports"
-  | "Communication"
-  | "Social Impact"
-  | "Business"
-  | "Culture";
+  | 'Technology'
+  | 'Arts'
+  | 'Sports'
+  | 'Academic'
+  | 'Community'
+  | 'Performance'
+  | 'Mind Sports'
+  | 'Communication'
+  | 'Social Impact'
+  | 'Business'
+  | 'Culture';
 
-export type ClubSize = "Small" | "Medium" | "Large";
+export type ClubSize = 'Small' | 'Medium' | 'Large';
 
 export interface ClubActivity {
   icon: string;
