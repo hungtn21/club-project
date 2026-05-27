@@ -1119,159 +1119,246 @@ export const clubs: Club[] = [
 ];
 
 export const quizQuestions: QuizQuestion[] = [
+  // ── Trắc nghiệm 1–7 ──────────────────────────────────────────────
   {
     id: 'q1',
-    text: 'Tối thứ Sáu, bạn thích làm gì nhất?',
+    type: 'multiple-choice',
+    text: 'Khi nhận chỉ trích gay gắt về dự án tâm huyết, bạn phản ứng thế nào?',
     options: [
       {
         id: 'q1_a',
-        text: 'Code một dự án cá nhân',
-        weights: { Technology: 3, Academic: 1 },
+        text: 'Phân tích xem chỉ trích có cơ sở không trước khi phản hồi',
+        weights: { analytical: 5, discipline: 3, technical: 2 },
       },
       {
         id: 'q1_b',
-        text: 'Vẽ, thiết kế hoặc làm nhạc',
-        weights: { Arts: 3, Community: 1 },
+        text: 'Hỏi thêm để hiểu đúng ý, tìm điểm chung',
+        weights: { communication: 5, teamwork: 3, 'cultural-awareness': 2 },
       },
       {
         id: 'q1_c',
-        text: 'Chạy bộ hoặc chơi thể thao',
-        weights: { Sports: 3 },
+        text: 'Cảm thấy bị kích thích, muốn chứng minh họ sai bằng hành động',
+        weights: { resilience: 5, competitive: 3, performance: 2 },
       },
       {
         id: 'q1_d',
-        text: 'Đọc sách hoặc thảo luận chuyên sâu',
-        weights: { Academic: 3, Technology: 1 },
+        text: 'Tự tin bảo vệ quan điểm với lập luận rõ ràng hơn',
+        weights: { confidence: 5, creative: 3, leadership: 2 },
       },
       {
         id: 'q1_e',
-        text: 'Tổ chức sự kiện cho cộng đồng',
-        weights: { Community: 3, Arts: 1 },
+        text: 'Ghi nhận và xem đây là dữ liệu để cải thiện lần sau',
+        weights: { 'learning-driven': 5, 'strategic-thinking': 3, 'problem-solving': 2 },
       },
     ],
   },
   {
     id: 'q2',
-    text: 'Loại công việc nào khiến bạn hứng khởi nhất?',
+    type: 'multiple-choice',
+    text: 'Dự án nhóm sắp kết thúc. Bạn ưu tiên làm gì nhất?',
     options: [
       {
         id: 'q2_a',
-        text: 'Giải quyết bài toán kỹ thuật khó',
-        weights: { Technology: 3 },
+        text: 'Đánh giá xem dự án có tạo ra giá trị thực sự không',
+        weights: { business: 5, 'strategic-thinking': 3, analytical: 2 },
       },
       {
         id: 'q2_b',
-        text: 'Thiết kế một thứ gì đó đẹp mắt',
-        weights: { Arts: 3, Technology: 1 },
+        text: 'Rà soát để đảm bảo không còn lỗi kỹ thuật hay logic',
+        weights: { analytical: 5, 'problem-solving': 3, technical: 2 },
       },
       {
         id: 'q2_c',
-        text: 'Luyện tập và cải thiện thể chất',
-        weights: { Sports: 3 },
+        text: 'Đảm bảo mọi thành viên được ghi nhận và cảm thấy trọn vẹn',
+        weights: { teamwork: 5, communication: 3, 'social-impact': 2 },
       },
       {
         id: 'q2_d',
-        text: 'Xây dựng lập luận thuyết phục',
-        weights: { Academic: 3, Community: 1 },
+        text: 'Chuẩn bị phần trình bày thật ấn tượng để tạo dấu ấn',
+        weights: { performance: 5, confidence: 3, creative: 2 },
       },
       {
         id: 'q2_e',
-        text: 'Tập hợp mọi người vì một mục tiêu chung',
-        weights: { Community: 3, Academic: 1 },
+        text: 'Viết lại những gì học được để không mất đi sau khi kết thúc',
+        weights: { 'learning-driven': 5, discipline: 3, resilience: 2 },
       },
     ],
   },
   {
     id: 'q3',
-    text: 'Bạn thích học theo cách nào?',
+    type: 'multiple-choice',
+    text: 'Bạn tiếp thu kiến thức/kỹ năng mới tốt nhất theo cách nào?',
     options: [
       {
         id: 'q3_a',
-        text: 'Tự xây dựng dự án và đọc tài liệu',
-        weights: { Technology: 2, Academic: 1 },
+        text: 'Đọc tài liệu chuyên sâu rồi tự hệ thống hóa lại',
+        weights: { 'learning-driven': 5, discipline: 3, analytical: 2 },
       },
       {
         id: 'q3_b',
-        text: 'Workshop và thực hành trực tiếp',
-        weights: { Arts: 2, Community: 1 },
+        text: 'Nhảy thẳng vào làm, phá vỡ rồi sửa cho đến khi hiểu bản chất',
+        weights: { technical: 5, 'problem-solving': 3, 'learning-driven': 2 },
       },
       {
         id: 'q3_c',
-        text: 'Luyện tập thể chất lặp đi lặp lại',
-        weights: { Sports: 3 },
+        text: 'Xem người giỏi làm, cảm nhận trực quan rồi bắt chước và biến tấu',
+        weights: { performance: 5, communication: 3, confidence: 2 },
       },
       {
         id: 'q3_d',
-        text: 'Nghiên cứu và học có hệ thống',
-        weights: { Academic: 2, Technology: 1 },
+        text: 'Phân rã thành các phần nhỏ, hiểu từng mảnh rồi ghép lại',
+        weights: { 'problem-solving': 5, 'strategic-thinking': 3, technical: 2 },
       },
       {
         id: 'q3_e',
-        text: 'Thảo luận và làm dự án nhóm',
-        weights: { Community: 2, Arts: 1 },
+        text: 'Trải nghiệm thực tế, học qua tương tác với người xung quanh',
+        weights: { 'cultural-awareness': 5, creative: 3, communication: 2 },
       },
     ],
   },
   {
     id: 'q4',
-    text: 'CLB lý tưởng của bạn sẽ tạo ra điều gì?',
+    type: 'multiple-choice',
+    text: 'Trong tập thể, mọi người thường miêu tả bạn là người như thế nào?',
     options: [
       {
         id: 'q4_a',
-        text: 'Sản phẩm hoạt động được hoặc công cụ mã nguồn mở',
-        weights: { Technology: 3 },
+        text: 'Người định hướng, phân công và giữ mọi thứ đi đúng hướng',
+        weights: { leadership: 5, confidence: 3, 'strategic-thinking': 2 },
       },
       {
         id: 'q4_b',
-        text: 'Triển lãm, tạp chí hoặc buổi biểu diễn',
-        weights: { Arts: 3, Community: 1 },
+        text: 'Người mà thiếu đi, nhóm sẽ rời rạc ngay',
+        weights: { teamwork: 5, communication: 3, 'cultural-awareness': 2 },
       },
       {
         id: 'q4_c',
-        text: 'Kết quả thi đấu hoặc chức vô địch',
-        weights: { Sports: 3, Academic: 1 },
+        text: 'Người luôn hoàn thành đúng hạn, không cần nhắc nhở',
+        weights: { discipline: 5, resilience: 3, technical: 2 },
       },
       {
         id: 'q4_d',
-        text: 'Chiến thắng tranh luận hoặc bài nghiên cứu',
-        weights: { Academic: 3 },
+        text: 'Người mang lại góc nhìn độc đáo và làm mọi thứ có hồn hơn',
+        weights: { creative: 5, performance: 3, confidence: 2 },
       },
       {
         id: 'q4_e',
-        text: 'Sự thay đổi lâu dài cho trường học',
-        weights: { Community: 3, Academic: 1 },
+        text: 'Người được gọi khi mọi thứ bắt đầu rối',
+        weights: { analytical: 5, 'problem-solving': 3, 'strategic-thinking': 2 },
       },
     ],
   },
   {
     id: 'q5',
-    text: 'Điều gì thúc đẩy bạn nhiều nhất?',
+    type: 'multiple-choice',
+    text: '"Thành công" với bạn là gì?',
     options: [
       {
         id: 'q5_a',
-        text: 'Tạo ra những thứ chưa từng tồn tại',
-        weights: { Technology: 2, Academic: 1 },
+        text: 'Xây dựng thứ có giá trị kinh tế thực sự, tạo ra nguồn lực bền vững',
+        weights: { business: 5, 'strategic-thinking': 3, competitive: 2 },
       },
       {
         id: 'q5_b',
-        text: 'Thể hiện tầm nhìn sáng tạo của bạn',
-        weights: { Arts: 3 },
+        text: 'Tạo ra tác động xã hội thấy được, thay đổi cuộc sống người khác',
+        weights: { 'social-impact': 5, leadership: 3, 'cultural-awareness': 2 },
       },
       {
         id: 'q5_c',
-        text: 'Vượt giới hạn thể chất của bản thân',
-        weights: { Sports: 3 },
+        text: 'Được nhớ đến vì tạo ra thứ đẹp, độc đáo và chạm đến cảm xúc',
+        weights: { performance: 5, confidence: 3, creative: 2 },
       },
       {
         id: 'q5_d',
-        text: 'Hiểu sâu hơn về thế giới xung quanh',
-        weights: { Academic: 2, Technology: 1 },
+        text: 'Hiểu sâu một lĩnh vực đến mức không ai có thể lấy đi',
+        weights: { technical: 5, 'learning-driven': 3, resilience: 2 },
       },
       {
         id: 'q5_e',
-        text: 'Kết nối mọi người và tạo ra thay đổi',
-        weights: { Community: 3, Arts: 1 },
+        text: 'Liên tục chiến thắng, vượt mặt đối thủ giỏi nhất và được thừa nhận là người dẫn đầu',
+        weights: { competitive: 5, confidence: 3, discipline: 2 },
       },
     ],
+  },
+  {
+    id: 'q6',
+    type: 'multiple-choice',
+    text: 'Thời gian rảnh rỗi, bạn thường làm gì?',
+    options: [
+      {
+        id: 'q6_a',
+        text: 'Tình nguyện hoặc giúp đỡ người xung quanh',
+        weights: { 'social-impact': 5, teamwork: 3, communication: 2 },
+      },
+      {
+        id: 'q6_b',
+        text: 'Tập luyện thể thao hoặc rèn kỹ năng có hệ thống',
+        weights: { discipline: 5, resilience: 3, confidence: 2 },
+      },
+      {
+        id: 'q6_c',
+        text: 'Sáng tác, vẽ, chơi nhạc hoặc tạo ra thứ gì đó',
+        weights: { creative: 5, performance: 3, 'learning-driven': 2 },
+      },
+      {
+        id: 'q6_d',
+        text: 'Đọc sách, nghiên cứu hoặc lên kế hoạch cho mục tiêu tiếp theo',
+        weights: { 'strategic-thinking': 5, analytical: 3, competitive: 2 },
+      },
+      {
+        id: 'q6_e',
+        text: 'Theo dõi thị trường, khám phá cơ hội kinh doanh hoặc mô hình tạo ra giá trị',
+        weights: { business: 5, 'problem-solving': 3, 'learning-driven': 2 },
+      },
+    ],
+  },
+  {
+    id: 'q7',
+    type: 'multiple-choice',
+    text: 'Vào nhóm/CLB mới, không quen ai, dự án lạ lẫm, bạn bắt đầu thế nào?',
+    options: [
+      {
+        id: 'q7_a',
+        text: 'Chủ động làm quen, tạo không khí cởi mở để mọi người chia sẻ',
+        weights: { communication: 5, confidence: 3, teamwork: 2 },
+      },
+      {
+        id: 'q7_b',
+        text: 'Quan sát, lắng nghe, phân tích bức tranh tổng thể trước khi hành động',
+        weights: { 'strategic-thinking': 5, analytical: 3, 'cultural-awareness': 2 },
+      },
+      {
+        id: 'q7_c',
+        text: 'Đề xuất cách tiếp cận, chia việc và giúp nhóm có hướng đi rõ ngay',
+        weights: { leadership: 5, 'problem-solving': 3, technical: 2 },
+      },
+      {
+        id: 'q7_d',
+        text: 'Tìm hiểu dự án thật kỹ, học nhanh những gì còn thiếu',
+        weights: { 'learning-driven': 5, discipline: 3, teamwork: 2 },
+      },
+      {
+        id: 'q7_e',
+        text: 'Chấp nhận mơ hồ, lao vào làm và điều chỉnh dần theo thực tế',
+        weights: { resilience: 5, discipline: 3, confidence: 2 },
+      },
+    ],
+  },
+
+  // ── Tự luận 8–10 ─────────────────────────────────────────────────
+  {
+    id: 'q8',
+    type: 'short-answer',
+    text: 'Hãy kể về một lần bạn tập trung cao độ, làm việc quên cả thời gian. Điểm chính nào ở hoạt động đó đã tạo ra sức cuốn hút mãnh liệt đến vậy?',
+  },
+  {
+    id: 'q9',
+    type: 'short-answer',
+    text: 'Giữa một môi trường nhiều biến hoá, nhiều sự thay đổi, đâu là một điều mà bạn tuyệt đối không bao giờ đánh mất, cho dù điều đó có thể đem lại những rủi ro cho bạn?',
+  },
+  {
+    id: 'q10',
+    type: 'short-answer',
+    text: 'Nếu những người xung quanh đưa ra đánh giá về thế mạnh lớn nhất của bạn, đó sẽ là gì? Nó sẽ khác gì với những gì bạn tự nhận về mình? ',
   },
 ];

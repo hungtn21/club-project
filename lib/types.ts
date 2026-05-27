@@ -57,11 +57,12 @@ export interface Club {
 export interface QuizOption {
   id: string;
   text: string;
-  weights: Partial<Record<ClubCategory, number>>;
+  weights: Partial<Record<string, number>>;
 }
 
 export interface QuizQuestion {
   id: string;
   text: string;
-  options: QuizOption[];
+  type: "multiple-choice" | "short-answer";
+  options?: QuizOption[];
 }
