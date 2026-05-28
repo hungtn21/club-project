@@ -66,3 +66,21 @@ export interface QuizQuestion {
   type: "multiple-choice" | "short-answer";
   options?: QuizOption[];
 }
+
+export interface ClubMatchResult {
+  id: string;
+  name: string;
+  tagScore: number;
+  aiScore: number;
+  finalScore: number;
+}
+
+export interface QuizResultOutput {
+  clubs: ClubMatchResult[];
+  personality: {
+    type: string;
+    description: string;
+    strengths: string[];
+  };
+  topTags: string[];
+}
