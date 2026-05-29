@@ -38,19 +38,37 @@ export default async function ClubDetailPage({ params }: Props) {
           <p className="text-xl text-secondary-text max-w-2xl font-light leading-relaxed">
             {club.description}
           </p>
-          <div className="flex gap-4 mt-2">
-            <Button
-              variant="primary"
-              className="px-8 py-3 flex items-center gap-2"
-            >
-              <span>Tham gia câu lạc bộ</span>
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
-            </Button>
-            <Button variant="secondary" className="px-8 py-3">
-              Liên hệ với chúng tôi
-            </Button>
+          <div className="flex flex-wrap justify-center gap-4 mt-2">
+            {club.isRecruiting ? (
+              <Link
+                href={`/recruitment?club=${club.id}`}
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary-container px-8 py-3 text-sm font-medium text-on-primary transition-colors hover:bg-primary"
+              >
+                <span>Ứng tuyển ngay</span>
+                <span className="material-symbols-outlined text-sm">
+                  arrow_forward
+                </span>
+              </Link>
+            ) : (
+              <Link
+                href="/clubs"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary-container px-8 py-3 text-sm font-medium text-on-primary transition-colors hover:bg-primary"
+              >
+                <span>Xem câu lạc bộ khác</span>
+              </Link>
+            )}
+            {club.email ? (
+              <a
+                href={`mailto:${club.email}`}
+                className="inline-flex items-center justify-center rounded-lg border border-primary-container bg-surface px-8 py-3 text-sm font-medium text-primary transition-colors hover:bg-surface-container-low"
+              >
+                Liên hệ với chúng tôi
+              </a>
+            ) : (
+              <Button variant="secondary" className="px-8 py-3">
+                Liên hệ với chúng tôi
+              </Button>
+            )}
           </div>
         </Container>
       </section>

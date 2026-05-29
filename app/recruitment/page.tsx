@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Container from "@/components/ui/Container";
 import RecruitmentClient from "@/components/recruitment/RecruitmentClient";
 import { clubs } from "@/lib/mockData";
@@ -13,7 +14,13 @@ export default function RecruitmentPage() {
           Khám phá hàng trăm câu lạc bộ đang mở tuyển dụng. Nơi bạn phát triển kỹ năng, kết nối bạn bè và kiến tạo những kỹ năm tương lai.
         </p>
       </div>
-      <RecruitmentClient clubs={clubs} />
+      <Suspense
+        fallback={
+          <p className="text-sm text-gray-400">Đang tải danh sách tuyển...</p>
+        }
+      >
+        <RecruitmentClient clubs={clubs} />
+      </Suspense>
     </Container>
   );
 }

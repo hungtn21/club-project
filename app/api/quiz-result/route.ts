@@ -67,7 +67,7 @@ Trả về JSON hợp lệ theo đúng format sau, KHÔNG thêm bất kỳ text 
 Đánh giá tất cả ${clubs.length} câu lạc bộ, điểm từ 0 đến 100.`;
 
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },

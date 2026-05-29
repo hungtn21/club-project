@@ -154,7 +154,7 @@ export default function ResultClient() {
       ? result.personality
       : { type: fallbackCluster.title, description: fallbackCluster.description, strengths: fallbackCluster.strengths };
 
-  const clubsToShow = result
+  const clubsToShow = (result
     ? result.clubs
         .map((r) => ({ result: r, club: clubs.find((c) => c.id === r.id)! }))
         .filter((x) => x.club)
@@ -169,7 +169,8 @@ export default function ResultClient() {
           },
           club,
         }))
-        .sort((a, b) => b.result.finalScore - a.result.finalScore);
+        .sort((a, b) => b.result.finalScore - a.result.finalScore)
+  ).slice(0, 5);
 
   const topFinalScore = clubsToShow[0]?.result.finalScore ?? 1;
 
@@ -272,35 +273,40 @@ export default function ResultClient() {
                   ? Math.round((r.finalScore / topFinalScore) * 100)
                   : 0;
               return (
-                <Link key={club.id} href={`/clubs/${club.id}`} className="block">
-                  <Card className="flex flex-col gap-2.5">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-base font-semibold text-gray-900">
+                <Card key={club.id} className="flex flex-col gap-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <Link href={`/clubs/${club.id}`} className="flex-1 min-w-0">
+                      <h3 className="text-base font-semibold text-gray-900 hover:text-gray-600 transition-colors">
                         {club.name}
                       </h3>
-                      {index === 0 && (
-                        <span className="shrink-0 rounded-md bg-gray-900 px-2 py-0.5 text-xs font-medium text-white">
-                          Phù hợp nhất
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-gray-500 line-clamp-2">
-                      {club.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
-                        {club.category}
+                    </Link>
+                    {index === 0 && (
+                      <span className="shrink-0 rounded-md bg-gray-900 px-2 py-0.5 text-xs font-medium text-white">
+                        Phù hợp nhất
                       </span>
-                      <span className="text-xs text-gray-400">{matchPct}%</span>
-                    </div>
-                    <div className="h-1 rounded-full bg-gray-100">
-                      <div
-                        className="h-full rounded-full bg-gray-900"
-                        style={{ width: `${matchPct}%` }}
-                      />
-                    </div>
-                  </Card>
-                </Link>
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-500 line-clamp-2">
+                    {club.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
+                      {club.category}
+                    </span>
+                    <span className="text-xs text-gray-400">{matchPct}%</span>
+                  </div>
+                  <div className="h-1 rounded-full bg-gray-100">
+                    <div
+                      className="h-full rounded-full bg-gray-900"
+                      style={{ width: `${matchPct}%` }}
+                    />
+                  </div>
+                  {club.isRecruiting && (
+                    <Link href={`/recruitment?club=${club.id}`} className="self-end">
+                      <Button variant="primary">Ứng tuyển</Button>
+                    </Link>
+                  )}
+                </Card>
               );
             })}
           </div>
