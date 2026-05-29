@@ -67,20 +67,20 @@ export interface QuizQuestion {
   options?: QuizOption[];
 }
 
-export interface TagScore {
-  tag: string;
-  score: number;
+export interface ClubMatchResult {
+  id: string;
+  name: string;
+  tagScore: number;
+  aiScore: number;
+  finalScore: number;
 }
 
-export interface ClubScore {
-  clubId: string;
-  score: number;
-}
-
-export interface QuizResult {
-  clubScores: ClubScore[];
-  personalityType: string;
-  personalityDescription: string;
-  strengths: string[];
-  topTags: TagScore[];
+export interface QuizResultOutput {
+  clubs: ClubMatchResult[];
+  personality: {
+    type: string;
+    description: string;
+    strengths: string[];
+  };
+  topTags: string[];
 }
