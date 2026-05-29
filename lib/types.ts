@@ -66,3 +66,21 @@ export interface QuizQuestion {
   type: "multiple-choice" | "short-answer";
   options?: QuizOption[];
 }
+
+export interface TagScore {
+  tag: string;
+  score: number;
+}
+
+export interface ClubScore {
+  clubId: string;
+  score: number;
+}
+
+export interface QuizResult {
+  clubScores: ClubScore[];
+  personalityType: string;
+  personalityDescription: string;
+  strengths: string[];
+  topTags: TagScore[];
+}

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Club, ClubCategory } from "@/lib/types";
 import RecruitmentCard from "./RecruitmentCard";
 import RecruitmentDetailModal from "./RecruitmentDetailModal";
@@ -25,6 +26,7 @@ interface RecruitmentClientProps {
 }
 
 export default function RecruitmentClient({ clubs }: RecruitmentClientProps) {
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState<
     ClubCategory | "all"
   >("all");
@@ -32,6 +34,16 @@ export default function RecruitmentClient({ clubs }: RecruitmentClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const recruitingClubs = clubs.filter((club) => club.isRecruiting);
+
+  useEffect(() => {
+    const clubId = searchParams.get("club");
+    if (!clubId) return;
+    const club = clubs.find((c) => c.id === clubId && c.isRecruiting);
+    if (!club) return;
+    setSelectedCategory(club.category);
+    setSelectedClub(club);
+    setIsModalOpen(true);
+  }, [searchParams, clubs]);
 
   const filteredClubs =
     selectedCategory === "all"
